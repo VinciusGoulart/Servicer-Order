@@ -1,21 +1,22 @@
 package org.example.model.entities;
 
 public class OrderItem {
-    Integer quantity;
-    Double price;
-    Product product;
+    private Integer quantity;
+    private Double price;
+    private Product product;
 
-    public OrderItem(){
+    public OrderItem() {
 
     }
-    public OrderItem(Integer quantity, Double price,Product product) {
+
+    public OrderItem(Integer quantity, Double price, Product product) {
         this.quantity = quantity;
         this.price = price;
         this.product = product;
     }
 
-    public double subTotal(){
-        return  quantity * price;
+    public double subTotal() {
+        return quantity * price;
     }
 
     public Integer getQuantity() {
@@ -44,7 +45,7 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return getProduct().name +
+        return getProduct().getName() +
                 String.format(", $ %.2f", price) +
                 ", quantity : " + quantity +
                 String.format(", Subtotal: $ %.2f", subTotal());

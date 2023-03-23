@@ -5,12 +5,12 @@ import java.util.Date;
 
 public class Client {
 
-    public  static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    String Name;
-    String email;
-    Date birthDate;
+    public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    private String Name;
+    private String email;
+    private Date birthDate;
 
-    public Client(){
+    public Client() {
 
     }
 
